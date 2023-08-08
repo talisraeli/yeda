@@ -1,0 +1,40 @@
+.header
+    display: grid
+
+    *
+        line-height: 1
+
+    .header-top, .header-bottom
+        display: flex
+        padding-block: 1rem
+
+    .header-top
+        @include linear-gradient($color-primary, transparent)
+
+        .logo
+            padding: 0.5em
+            margin: -0.5em
+
+            img
+                height: 3rem
+
+    .header-bottom
+        @include linear-gradient($color-secondary, transparent)
+
+        nav ul
+            list-style: none
+            display: flex
+            gap: 2rem
+
+            li
+                img
+                    height: 1rem
+
+                a
+                    color: white
+                    font-weight: normal
+
+                &:last-child
+                    flex-grow: 1
+                    display: flex
+                    justify-content: end
