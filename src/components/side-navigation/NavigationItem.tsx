@@ -1,8 +1,9 @@
+import { Link } from 'preact-router/match';
 import style from './SideNavigation.module.sass';
 
 type NavigationItemProps = {
   name: string;
-  active?: boolean;
+  path: string;
 };
 
 /**
@@ -11,10 +12,10 @@ type NavigationItemProps = {
  */
 export default function NavigationItem(props: NavigationItemProps) {
   return (
-    <li class={props.active ? style.active : ''}>
-      <a class="wrapper" href="#">
+    <li class={style.item}>
+      <Link class="wrapper" activeClassName={style.active} href={props.path}>
         {props.name}
-      </a>
+      </Link>
     </li>
   );
 }
