@@ -8,6 +8,7 @@ import Content from './components/content/Content';
 
 import Home from './pages/home/Home';
 import NotFound from './pages/not-found/NotFound';
+import Term from './pages/term/Term';
 
 export default function App() {
   return (
@@ -16,7 +17,8 @@ export default function App() {
       <Content>
         <Router>
           <Home path="/" />
-          <NotFound default />
+          <NotFound path="/404" />
+          <Term path="/:name+" />
         </Router>
       </Content>
     </SideNavigationContext.Provider>

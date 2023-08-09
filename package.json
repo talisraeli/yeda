@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "lint": "eslint src/**/*.{js,jsx,ts,tsx}", 
+    "lint": "eslint src/**/*.{js,jsx,ts,tsx}",
     "lint:fix": "eslint --fix src/**/*.{js,jsx,ts,tsx}",
     "format": "prettier --write src/**/*.{js,jsx,ts,tsx,css,md,json,scss} --config ./.prettierrc",
     "prepare": "husky install"
@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "preact": "^10.13.2",
+    "preact-markdown": "^2.1.0",
     "preact-router": "^4.1.2"
   },
   "devDependencies": {

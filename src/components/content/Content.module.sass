@@ -1,11 +1,20 @@
 .content
     height: 100%
     display: flex
+    overflow: hidden
 
     .main-content
         flex-grow: 1
         display: grid
         grid-template-rows: 1fr auto
+        overflow: auto
 
         main
             padding-block: 2rem
+            max-width: calc( 100% - 16rem )
+
+            h2, h3, h4, h5, h6
+                margin-block: 2em 0.5em
+
+            p, li
+                margin-block: 1em
