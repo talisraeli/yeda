@@ -1,6 +1,7 @@
 /**
  * The home page of the website.
  */
+
 export default function Home() {
   return (
     <div>
