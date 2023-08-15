@@ -11,10 +11,27 @@
 
         main
             padding-block: 2rem
-            max-width: calc( 100% - 16rem )
+            //max-width: calc( 100% - 16rem ) // This doesn't work for mobile
+            max-width: 90%
 
             h2, h3, h4, h5, h6
                 margin-block: 2em 0.5em
 
             p, li
                 margin-block: 1em
+
+
+// General Media queries for responsive design 
+//TODO: remove these or use it later 
+
+@media (max-width: $small-screen)
+    // do something
+
+@media (min-width: $medium-screen) and (max-width: $large-screen)
+    // do something
+
+@media (min-width: $large-screen) and (max-width: $extra-large-screen)
+    // do something
+
+@media (min-width: $extra-large-screen)
+    // do something
