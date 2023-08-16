@@ -11,7 +11,7 @@ interface ButtonProps {
  */
 
 export function PrimaryButton(props: ButtonProps) {
-  return <button className={styles['primary-button']}>{props.children}</button>;
+  return <button className={style.primaryButton}>{props.children}</button>;
 }
 
 export function SecondaryButton(props: ButtonProps) {
