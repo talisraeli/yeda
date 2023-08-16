@@ -1,6 +1,6 @@
-import style from './Content.module.sass';
-
 import { JSX } from 'preact/jsx-runtime';
+
+import style from './Content.module.sass';
 import SideNavigation from '../side-navigation/SideNavigation';
 import Footer from '../footer/Footer';
 

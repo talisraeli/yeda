@@ -2,25 +2,25 @@ import style from './Header.module.sass';
 import logo from './logo.svg';
 import menu from './menu.svg';
 import search from './search.svg';
+
+interface HeaderProps {
+  toggleSideNav: () => void;
+}
+
 /**
  * The header of the website.
  */
-
-interface Props {
-  toggleSideNav: Function
-}
-
-export default function Header(props:Props) {
+export default function Header(props: HeaderProps) {
   const handleOnClickMenu = () => {
     props.toggleSideNav();
-  }
-  
+  };
+
   return (
     <header class={style.header}>
       <div class={style.headerTop}>
         <div className="wrapper">
           <a class={style.logo} href="/">
-            <img src={logo} alt="סמל ידע"/>
+            <img src={logo} alt="סמל ידע" />
           </a>
         </div>
       </div>

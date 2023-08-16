@@ -15,7 +15,6 @@ body
 h1, h2, h3, h4, h5, h6, strong
     font-weight: 500
 
-
 p
     line-height: 2
     color: $text-color-secondary
@@ -33,49 +32,18 @@ ul, ol
     width: 100%
     box-sizing: border-box
 
-.centered-container 
-    display:flex
+.centered-container
+    display: flex
     width: 100%
-    justify-content:center
-    align-items:center
-    
-/* classes for buttons (jonathan) */
-.button 
-  padding-top: 0.85em
-  padding-bottom: 0.85em
-  padding-right: 2em
-  padding-left: 2em
-  font-weight: bold
-  border: 1px solid transparent
-  border-radius: 1rem
-  cursor: pointer
+    justify-content: center
+    align-items: center
 
-.primary-button 
-    background-color: $color-primary
-
-.primary-button:hover
-    background-color: transparent
-    border: 1px solid $color-primary
-
-.secondary-button
-    background-color: transparent
-    border: 1px solid $color-primary
-
-.secondary-button:hover
-    background-color: $color-primary
-
-.super-header 
-    color: #17E6A8
+.super-header
+    color: $color-primary-light
     font-size: 3rem
     margin-bottom: 1rem
     font-weight: bold
 
-.remove-all
-    all:unset
-        
-@media screen and (min-width: $medium-screen) 
-        .super-header
-            font-size: 5rem
-
-
-    
+@media screen and (min-width: $medium-screen)
+    .super-header
+        font-size: 5rem

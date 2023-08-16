@@ -1,41 +1,24 @@
 import './style/global.sass';
 
-import { SideNavigationContext } from './store/SideNavigationContext';
+// preact imports
 import Router from 'preact-router';
 
+import { SideNavigationContext } from './store/SideNavigationContext';
+
+// components
 import Header from './components/header/Header';
 import Content from './components/content/Content';
 
+// hooks
+import useSideNavigation from './hooks/useSideNavigation.ts';
+
+// pages
 import Home from './pages/home/Home';
-import NotFound from './pages/404/404.tsx';
+import NotFound from './pages/NotFound/NotFound.tsx';
 import Term from './pages/term/Term';
-import { useEffect, useState } from 'preact/hooks';
 
 export default function App() {
-  const [sideNavOpen, setSideNavOpen] = useState(true);
-
-  const openSideNav = () => {
-    if(!sideNavOpen){
-      setSideNavOpen(true);
-    }
-  };
-
-  const closeSideNav = () => {
-    if(sideNavOpen){
-      setSideNavOpen(false);
-    }
-  };
-
-  const toggleSideNav = () => {
-    setSideNavOpen(prev => !prev);
-  };
-
-  useEffect(() => {
-    if (window.innerWidth < 768) {
-      // We don't want to show the side navigation on mobile on default!
-      setSideNavOpen(false);
-    }
-  }, []);
+  const { sideNavOpen, toggleSideNav } = useSideNavigation();
   return (
     <SideNavigationContext.Provider
       value={{ isSideNavigationOpen: sideNavOpen }}
@@ -44,7 +27,7 @@ export default function App() {
       <Content>
         <Router>
           <Home path="/" />
-          <NotFound path="/404" closeNav={closeSideNav} />
+          <NotFound path="/404" />
           <Term path="/:name+" />
         </Router>
       </Content>

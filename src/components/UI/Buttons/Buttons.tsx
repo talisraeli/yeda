@@ -1,17 +1,21 @@
-import { JSX } from 'preact/jsx-runtime';
+import { JSX } from 'preact';
+import styles from './Buttons.module.sass';
 
-interface Props {
-  onClick: () => any;
-  children: JSX.Element;
+interface ButtonProps {
+  onClick: () => void;
+  children: JSX.Element | string;
 }
-export const PrimaryButton = (props: Props) => {
-  return <button className="button primary-button">{props.children}</button>;
-};
 
-export const SecondaryButton = (props: Props) => {
+/**
+ * Button components for the UI
+ */
+
+export function PrimaryButton(props: ButtonProps) {
+  return <button className={styles['primary-button']}>{props.children}</button>;
+}
+
+export function SecondaryButton(props: ButtonProps) {
   return (
-    <button className="button secondary-button">
-      {props.children}
-    </button>
+    <button className={styles['secondary-button']}>{props.children}</button>
   );
-};
+}

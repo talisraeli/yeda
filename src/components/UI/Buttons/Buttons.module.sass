@@ -1,0 +1,27 @@
+
+$button-border: $color-primary
+
+/* classes for buttons (jonathan) */
+.button
+    padding-top: 0.85em
+    padding-bottom: 0.85em
+    padding-inline-start: 2em
+    padding-inline-end: 2em
+    font-weight: bold
+    border: 1px solid $button-border
+    border-radius: 1rem
+    cursor: pointer
+
+.primary-button
+    @extend .button
+    background-color: $color-primary
+
+    &:hover
+        background-color: transparent
+
+.secondary-button
+    @extend .button
+    background-color: transparent
+
+    &:hover
+        background-color: $color-primary
