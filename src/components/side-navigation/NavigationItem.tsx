@@ -10,6 +10,7 @@ type NavigationItemProps = {
  * A navigation item on the side navigation.
  * @param props The props of the component.
  */
+
 export default function NavigationItem(props: NavigationItemProps) {
   return (
     <li class={style.item}>

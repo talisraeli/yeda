@@ -3,10 +3,18 @@ import logo from './logo.svg';
 import menu from './menu.svg';
 import search from './search.svg';
 
+interface HeaderProps {
+  toggleSideNav: () => void;
+}
+
 /**
  * The header of the website.
  */
-export default function Header() {
+export default function Header(props: HeaderProps) {
+  const handleOnClickMenu = () => {
+    props.toggleSideNav();
+  };
+
   return (
     <header class={style.header}>
       <div class={style.headerTop}>
@@ -21,7 +29,7 @@ export default function Header() {
           <ul>
             <li>
               <a href="#">
-                <img src={menu} alt="סמל תפריט" />
+                <img src={menu} alt="סמל תפריט" onClick={handleOnClickMenu} />
               </a>
             </li>
             <li>
