@@ -1,7 +1,7 @@
 import { JSX } from 'preact';
 import styles from './Buttons.module.sass';
 
-interface ButtonProps {
+interface ButtonProps extends JSX.HTMLAttributes<HTMLButtonElement> {
   onClick: () => void;
   children: JSX.Element | string;
 }
@@ -11,11 +11,11 @@ interface ButtonProps {
  */
 
 export function PrimaryButton(props: ButtonProps) {
-  return <button className={styles['primary-button']}>{props.children}</button>;
+  return <button className={style.primaryButton}>{props.children}</button>;
 }
 
 export function SecondaryButton(props: ButtonProps) {
   return (
-    <button className={styles['secondary-button']}>{props.children}</button>
+    <button className={style.secondaryButton}>{props.children}</button>
   );
 }
