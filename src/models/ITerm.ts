@@ -9,4 +9,3 @@ interface ITerm {
 }
 
 export default ITerm;
-
