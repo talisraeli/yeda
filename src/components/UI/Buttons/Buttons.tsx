@@ -1,7 +1,7 @@
 import { JSX } from 'preact';
 import styles from './Buttons.module.sass';
 
-interface ButtonProps {
+interface ButtonProps extends JSX.HTMLAttributes<HTMLButtonElement> {
   onClick: () => void;
   children: JSX.Element | string;
 }
