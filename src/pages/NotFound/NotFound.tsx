@@ -11,6 +11,7 @@ export default function NotFound() {
   const returnHome = () => {
     route('/', true);
   };
+  
   return (
     <div>
       <main>
