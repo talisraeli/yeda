@@ -16,6 +16,6 @@ export function PrimaryButton(props: ButtonProps) {
 
 export function SecondaryButton(props: ButtonProps) {
   return (
-    <button className={styles['secondary-button']}>{props.children}</button>
+    <button className={style.secondaryButton}>{props.children}</button>
   );
 }
