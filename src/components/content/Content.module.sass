@@ -11,7 +11,7 @@
 
         main
             padding-block: 2rem
-            width: 90%
+            max-width: calc( 100% - 16rem ) 
 
             h2, h3, h4, h5, h6
                 margin-block: 2em 0.5em
@@ -21,7 +21,7 @@
 
 
 // Media queries for responsive design 
-@media screen and (min-width: $large-screen)
+@media screen and (max-width: $small-screen)
     .content > .main-content > main
-        max-width: calc( 100% - 16rem ) // Only apply it desktop: "Mobile first"
+        max-width: 90%
 
