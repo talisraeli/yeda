@@ -8,7 +8,6 @@ import { PrimaryButton } from '../../components/UI/Buttons/Buttons';
  * A 404 not found page, in case a user enters an invalid url
  */
 export default function NotFound() {
-  useEffect(() => {}, []);
   const returnHome = () => {
     route('/', true);
   };
