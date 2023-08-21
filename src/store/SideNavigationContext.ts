@@ -1,6 +1,6 @@
 import { createContext } from 'preact';
 
-interface ISideNavigationContext {
+export interface ISideNavigationContext {
   isSideNavigationOpen: boolean;
 }
 

@@ -9,7 +9,7 @@
         padding-block: 1rem
 
     .header-top
-        @include linear-gradient($color-primary, transparent)
+        @include linear-gradient($color-primary, black)
 
         .logo
             padding: 0.5em
@@ -19,7 +19,7 @@
                 height: 3rem
 
     .header-bottom
-        @include linear-gradient($color-secondary, transparent)
+        @include linear-gradient($color-secondary, black)
 
         nav ul
             list-style: none
@@ -34,7 +34,18 @@
                     color: white
                     font-weight: normal
 
+                button
+                    appearance: none
+                    background: transparent
+                    border: none
+                    cursor: pointer
+                    border-radius: 50%
+                    outline: none
+                    padding: 0.25em
+                    margin: -0.25em
+                    
                 &:last-child
                     flex-grow: 1
                     display: flex
                     justify-content: end
+                    gap: 1rem
