@@ -4,6 +4,7 @@ import './style/global.sass';
 import Router from 'preact-router';
 
 // components
+import Providers from '~store/Providers';
 import Header from '~components/header/Header';
 import Content from '~components/content/Content';
 
@@ -15,7 +16,6 @@ import useTheme from '~hooks/useTheme';
 import Home from '~pages/home/Home';
 import NotFound from '~pages/NotFound/NotFound.tsx';
 import Term from '~pages/term/Term';
-import Providers from '~store/Providers';
 
 export default function App() {
   const { isSideNavigationOpen, toggleSideNavigation } = useSideNavigation();
