@@ -24,7 +24,8 @@
   "dependencies": {
     "preact": "^10.13.2",
     "preact-markdown": "^2.1.0",
-    "preact-router": "^4.1.2"
+    "preact-router": "^4.1.2",
+    "vite-tsconfig-paths": "^4.2.0"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.5.0",
