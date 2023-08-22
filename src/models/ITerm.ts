@@ -2,10 +2,10 @@
  * The model defenition for a term object.
  */
 interface ITerm {
-  name: string;
+  urlPath: string;
   displayName: string;
   description: string;
-  markdownPath: string;
+  customMarkdownPath?: string;
 }
 
 export default ITerm;

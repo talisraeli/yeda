@@ -5,10 +5,15 @@ import ITerm from '~/models/ITerm';
  */
 export const termsData: ITerm[] = [
   {
-    name: 'מושג-לדוגמה',
-    displayName: 'מושג לדוגמה',
-    description:
-      'לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית גולר מונפרר סוברט לורם שבצק יהול, לכנוץ בעריר גק ליץ, ושבעגט ליבם סולגק.',
-    markdownPath: 'מושג-לדוגמה',
+    urlPath: 'getStarted',
+    displayName: 'צעדים ראשונים',
+    description: 'התחל להשתמש ב״ידע״',
+    customMarkdownPath: 'getStarted',
+  },
+  {
+    urlPath: 'project_structure',
+    displayName: 'מבנה הפרויקט ',
+    description: 'הכר את מבנה הפרויקט',
+    customMarkdownPath: 'project_structure',
   },
 ];

@@ -25,8 +25,7 @@ export default function Term(props: TermProps) {
       route('/404', true);
       return;
     }
-
-    const term = termsData.find(t => t.name === props.name);
+    const term = termsData.find(t => t.urlPath === props.name);
 
     if (term === undefined) {
       route('/404', true);
@@ -35,7 +34,7 @@ export default function Term(props: TermProps) {
 
     setTerm(term);
 
-    fetch(`/terms/${term.markdownPath}.markdown`)
+    fetch(`/terms/${term.customMarkdownPath}.md`)
       .then(res => res.text())
       .then(text => setMarkdown(text))
       // eslint-disable-next-line no-console
