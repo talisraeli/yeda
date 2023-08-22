@@ -11,6 +11,7 @@ $button-border: $color-primary
     border: 1px solid $button-border
     border-radius: 1rem
     cursor: pointer
+    display: block // as default
 
 .primary-button
     @extend .button
@@ -25,3 +26,10 @@ $button-border: $color-primary
 
     &:hover
         background-color: $color-primary
+
+.button-icon
+    width: 20px
+    height: 20px
+
+.container
+    display: flex 

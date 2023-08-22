@@ -5,6 +5,9 @@ import ITerm from '~/models/ITerm';
 import Markdown from 'preact-markdown';
 import useChangeDescription from '../../hooks/useChangeDescription';
 import useChangeTitle from '../../hooks/useChangeTitle';
+import { Fragment } from 'preact/jsx-runtime';
+import { PrimaryButton } from '~components/UI/Buttons/Buttons';
+import styles from './Term.module.sass';
 
 type TermProps = {
   name?: string;
@@ -14,6 +17,11 @@ type TermProps = {
  * The term page template of the website.
  */
 export default function Term(props: TermProps) {
+  //TODO: implement these dummy methods once the representation of terms is final.
+  const visitNextItem = () => {};
+
+  const visitPreviousItem = () => {};
+
   const [term, setTerm] = useState<ITerm>();
   useChangeTitle(term?.displayName);
   useChangeDescription(term?.description);
@@ -41,5 +49,16 @@ export default function Term(props: TermProps) {
       .catch(error => console.error(error));
   }, [props.name]);
 
-  return markdown ? Markdown(markdown) : null;
+  const markdownContent = markdown ? Markdown(markdown) : null;
+  return (
+    <Fragment>
+      {markdownContent}
+      <div class={styles.afterMarkdown}>
+        <div class={styles.buttonList}>
+          <PrimaryButton onClick={visitPreviousItem}>למושג הקודם</PrimaryButton>
+          <PrimaryButton onClick={visitNextItem}>למושג הבא</PrimaryButton>
+        </div>
+      </div>
+    </Fragment>
+  );
 }
