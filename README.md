@@ -1,14 +1,13 @@
 # ידע
 
-![code size](https://img.shields.io/github/languages/code-size/talisraeli/Yeda "Title")
-![license](https://img.shields.io/github/license/talisraeli/Yeda "Title")
-![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/talisraeli/Yeda/azure-static-web-apps-happy-field-0f5282803.yml "Title")
+![code size](https://img.shields.io/github/languages/code-size/talisraeli/Yeda 'Title')
+![license](https://img.shields.io/github/license/talisraeli/Yeda 'Title')
+![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/talisraeli/Yeda/azure-static-web-apps-happy-field-0f5282803.yml 'Title')
+![GitHub top language](https://img.shields.io/github/languages/top/talisraeli/Yeda)
 
-
-״ידע״ זו תבנית אתר שמאפשרת בנייה של מדריכים טקסטואליים ומילוני מונחים   בעברית. לאחר ההורדה של הפרויקט, תוכלו להוסיף תוכן חדש בפשטות באמצעות קבצי markdown.
+״ידע״ זו תבנית אתר שמאפשרת בנייה של מדריכים טקסטואליים ומילוני מונחים בעברית. לאחר ההורדה של הפרויקט, תוכלו להוסיף תוכן חדש בפשטות באמצעות קבצי markdown.
 
 הפרויקט פותח על ידי חברי קהילת מעקף (קהילת הקוד הפתוח של ישראל) וניתן להשתמש בו בחינם ובאופן חופשי.
-
 
 ## טכנולוגיות
 
@@ -18,10 +17,10 @@
 
 ## פיצ׳רים 📌
 
-* הפרויקט נבנה ב-**preact** ועל כן חסכוני ביותר מבחינת זיכרון.
+- הפרויקט נבנה ב-**preact** ועל כן חסכוני ביותר מבחינת זיכרון.
   בעוד שפרויקטים אחרים בפלטפורמות כגון React.js ו-Next.js מגיעיים לג׳יגה-בייטים של זיכרון, בעוד כאן מדובר על סדר גודל של עשרות קילובייטים בלבד. כלומר, חיסכון פי עשרות עד מאות מונים.
 
-* הוספה של מושגים חדשים בפורמט markdown. זה מקל ומקצר את תהליך העבודה בהרבה ובכך גם ניתן להשתמש בפורמט הזה במקומות אחרים מבלי לשכתב הכל מחדש.
+- הוספה של מושגים חדשים בפורמט markdown. זה מקל ומקצר את תהליך העבודה בהרבה ובכך גם ניתן להשתמש בפורמט הזה במקומות אחרים מבלי לשכתב הכל מחדש.
 
 ## דרישות מקדימות 📦
 
