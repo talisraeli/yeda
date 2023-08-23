@@ -1,13 +1,20 @@
+// preact imports
 import { useEffect, useState } from 'preact/hooks';
-import { termsData } from './termsData';
+import { Fragment } from 'preact/jsx-runtime';
 import { route } from 'preact-router';
-import ITerm from '~/models/ITerm';
 import Markdown from 'preact-markdown';
+
+// yeda imports
+import { termsData } from './termsData';
+import ITerm from '~/models/ITerm';
 import useChangeDescription from '../../hooks/useChangeDescription';
 import useChangeTitle from '../../hooks/useChangeTitle';
-import { Fragment } from 'preact/jsx-runtime';
 import { PrimaryButton } from '~components/UI/Buttons/Buttons';
 import styles from './Term.module.sass';
+
+// svgs
+import backArrow from '../../../public/assets/backArrow.svg';
+import nextArrow from '../../../public/assets/nextArrow.svg';
 
 type TermProps = {
   name?: string;
@@ -55,8 +62,16 @@ export default function Term(props: TermProps) {
       {markdownContent}
       <div class={styles.afterMarkdown}>
         <div class={styles.buttonList}>
-          <PrimaryButton onClick={visitPreviousItem}>למושג הקודם</PrimaryButton>
-          <PrimaryButton onClick={visitNextItem}>למושג הבא</PrimaryButton>
+          <PrimaryButton
+            onClick={visitPreviousItem}
+            icon={backArrow}
+            isReversed={true}
+          >
+            למושג הקודם
+          </PrimaryButton>
+          <PrimaryButton onClick={visitNextItem} icon={nextArrow}>
+            למושג הבא
+          </PrimaryButton>
         </div>
       </div>
     </Fragment>

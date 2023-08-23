@@ -34,4 +34,10 @@ export const termsData: ITerm[] = [
     description: 'תרמו קוד לפרויקט',
     customMarkdownPath: 'contribute',
   },
+  {
+    urlPath: 'uiSystem',
+    displayName: 'רכיבים ויזואלים',
+    description: 'רכיבים ויזואלים',
+    customMarkdownPath: 'uiSystem',
+  },
 ];

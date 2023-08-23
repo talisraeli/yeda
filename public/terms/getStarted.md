@@ -17,6 +17,4 @@
 
 וודאו ש-NodeJS מותקן אצלכם במערכת טרם ההתקנה. תוכלו להריץ את הפקודה הבאה לשם כך בשורת הפקודה או ב-terminal:
 
-```bash
-node --version
-```
+<code>node --version</code>
