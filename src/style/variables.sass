@@ -7,8 +7,8 @@
     --color-secondary-dark: hsl(13, 100%, 15%)
     --color-secondary: hsl(13, 100%, 30%)
 
-    --bg-color-primary: #161824
-    --bg-color-secondary: #12151f
+    --bg-color-primary: #1D1D1D
+    --bg-color-secondary: #131313
     --bg-color-tertiary: hsl(0, 0%, 20%)
     --bg-color-quaternary: hsl(0, 0%, 30%)
 
@@ -16,11 +16,11 @@
     --text-color-secondary: hsl(0, 0%, 80%)
 
     // Component colors
-    --bg-color-header: hsl(0, 0%, 0%)
-
+    --bg-header-top: #192619
+    --bg-header-bottom: #131c13
     --text-color-header: hsl(0, 0%, 100%)
     --text-color-side-navigation: hsl(0, 0%, 100%)
-
+    --code-default-color: #efc622
 [data-theme=light]
     // Global colors
     --color-primary-light: hsl(162, 100%, 30%)
@@ -32,7 +32,7 @@
 
     --text-color-primary: hsl(0, 0%, 0%)
     --text-color-secondary: hsl(0, 0%, 20%)
-
+    --code-default-color: #5e5e5e
 // Global colors
 $color-primary-dark: var(--color-primary-dark)
 $color-primary: var(--color-primary)
@@ -47,10 +47,11 @@ $bg-color-quaternary: var(--bg-color-quaternary)
 
 $text-color-primary: var(--text-color-primary)
 $text-color-secondary: var(--text-color-secondary)
+$code-default-color: var(--code-default-color)
 
 // Component colors
-$bg-color-header: var(--bg-color-header)
-
+$bg-header-top: var(--bg-header-top)
+$bg-header-bottom: var(--bg-header-bottom)
 $text-color-header: var(--text-color-header)
 $text-color-side-navigation: var(--text-color-side-navigation)
 
@@ -60,13 +61,13 @@ $medium-screen: 768px
 $large-screen: 992px
 $extra-large-screen: 1200px
 
-$code-default-color: #efc622
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&display=swap')
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap')
 
 $font-primary: Heebo, Helvetica, Arial, sans-serif
 $font-code: 'JetBrains Mono', monospace
+
 // Gradients
 @mixin linear-gradient($colorA, $colorB)
     background: linear-gradient(to right, $colorA, $colorB)
