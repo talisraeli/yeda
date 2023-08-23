@@ -28,4 +28,10 @@ export const termsData: ITerm[] = [
     description: 'עיצוב האתר',
     customMarkdownPath: 'customDesign',
   },
+  {
+    urlPath: 'contribute',
+    displayName: 'תרמו קוד לפרויקט',
+    description: 'תרמו קוד לפרויקט',
+    customMarkdownPath: 'contribute',
+  },
 ];
