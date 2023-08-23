@@ -11,9 +11,21 @@ export const termsData: ITerm[] = [
     customMarkdownPath: 'getStarted',
   },
   {
-    urlPath: 'project_structure',
+    urlPath: 'projectStructure',
     displayName: 'מבנה הפרויקט ',
     description: 'הכר את מבנה הפרויקט',
-    customMarkdownPath: 'project_structure',
+    customMarkdownPath: 'projectStructure',
+  },
+  {
+    urlPath: 'addTerms',
+    displayName: 'הוסף מונחים',
+    description: 'הוסף מונחים',
+    customMarkdownPath: 'addTerms',
+  },
+  {
+    urlPath: 'customDesign',
+    displayName: 'עיצוב האתר',
+    description: 'עיצוב האתר',
+    customMarkdownPath: 'customDesign',
   },
 ];
