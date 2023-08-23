@@ -1,15 +1,14 @@
 # ידע
 
-  <img src="https://img.shields.io/github/languages/code-size/talisraeli/Yeda" alt="code size">
-  <img src="https://img.shields.io/github/license/talisraeli/Yeda" alt="license">
-  <img alt="GitHub Workflow Status (with event)" src="https://img.shields.io/github/actions/workflow/status/talisraeli/Yeda/azure-static-web-apps-happy-field-0f5282803.yml">
+![code size](https://img.shields.io/github/languages/code-size/talisraeli/Yeda "Title")
+![license](https://img.shields.io/github/license/talisraeli/Yeda "Title")
+![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/talisraeli/Yeda/azure-static-web-apps-happy-field-0f5282803.yml "Title")
 
-<p> 
+
 ״ידע״ זו תבנית אתר שמאפשרת בנייה של מדריכים טקסטואליים ומילוני מונחים   בעברית. לאחר ההורדה של הפרויקט, תוכלו להוסיף תוכן חדש בפשטות באמצעות קבצי markdown.
 
 הפרויקט פותח על ידי חברי קהילת מעקף (קהילת הקוד הפתוח של ישראל) וניתן להשתמש בו בחינם ובאופן חופשי.
 
-</p>
 
 ## טכנולוגיות
 
