@@ -1,8 +1,8 @@
 # ידע
 
   <img src="https://img.shields.io/github/languages/code-size/talisraeli/Yeda" alt="code size">
-  <img src="https://img.shields.io/github/license/talisraeli/Yeda" alt="license"></a>
-<img alt="GitHub Workflow Status (with event)" src="https://img.shields.io/github/actions/workflow/status/talisraeli/Yeda/azure-static-web-apps-happy-field-0f5282803.yml">
+  <img src="https://img.shields.io/github/license/talisraeli/Yeda" alt="license">
+  <img alt="GitHub Workflow Status (with event)" src="https://img.shields.io/github/actions/workflow/status/talisraeli/Yeda/azure-static-web-apps-happy-field-0f5282803.yml">
 
 <p> 
 ״ידע״ זו תבנית אתר שמאפשרת בנייה של מדריכים טקסטואליים ומילוני מונחים   בעברית. לאחר ההורדה של הפרויקט, תוכלו להוסיף תוכן חדש בפשטות באמצעות קבצי markdown.
