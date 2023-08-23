@@ -29,15 +29,15 @@ export const termsData: ITerm[] = [
     customMarkdownPath: 'customDesign',
   },
   {
-    urlPath: 'contribute',
-    displayName: 'תרמו קוד לפרויקט',
-    description: 'תרמו קוד לפרויקט',
-    customMarkdownPath: 'contribute',
-  },
-  {
     urlPath: 'uiSystem',
     displayName: 'רכיבים ויזואלים',
     description: 'רכיבים ויזואלים',
     customMarkdownPath: 'uiSystem',
+  },
+  {
+    urlPath: 'contribute',
+    displayName: 'תרמו קוד לפרויקט',
+    description: 'תרמו קוד לפרויקט',
+    customMarkdownPath: 'contribute',
   },
 ];
