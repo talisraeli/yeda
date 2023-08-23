@@ -2,6 +2,7 @@
 
   <img src="https://img.shields.io/github/languages/code-size/talisraeli/Yeda" alt="code size">
   <img src="https://img.shields.io/github/license/talisraeli/Yeda" alt="license"></a>
+<img alt="GitHub Workflow Status (with event)" src="https://img.shields.io/github/actions/workflow/status/talisraeli/Yeda/azure-static-web-apps-happy-field-0f5282803.yml">
 
 <p> 
 ״ידע״ זו תבנית אתר שמאפשרת בנייה של מדריכים טקסטואליים ומילוני מונחים   בעברית. לאחר ההורדה של הפרויקט, תוכלו להוסיף תוכן חדש בפשטות באמצעות קבצי markdown.
@@ -16,7 +17,14 @@
 הפרויקט פותח באמצעות <a href="https://preactjs.com/"> preact</a>, שזו פלטפורמה חסכונית מאוד בזיכרון עם ממשק כמעט זהה לשל react. הפרויקט נוצר באמצעות vite והוא מכיל typescript. בנוסף, נעשה שימוש בsass לצורך עיצוב התבנית, אם כי כמובן שלאחר ההתקנה אתם מוזמנים לשנות את העיצוב הגלובלי כרצונכם.
 </p>
 
-## דרישות מקדימות
+## פיצ׳רים 📌
+
+- הפרויקט נבנה ב-**preact** ועל כן חסכוני ביותר מבחינת זיכרון.
+  בעוד שפרויקטים אחרים בפלטפורמות כגון React.js ו-Next.js מגיעיים לג׳יגה-בייטים של זיכרון, בעוד כאן מדובר על סדר גודל של עשרות קילובייטים בלבד. כלומר, חיסכון פי עשרות עד מאות מונים.
+
+- הוספה של מושגים חדשים בפורמט markdown. זה מקל ומקצר את תהליך העבודה בהרבה ובכך גם ניתן להשתמש בפורמט הזה במקומות אחרים מבלי לשכתב הכל מחדש.
+
+## דרישות מקדימות 📦
 
 וודאו ש-NodeJS מותקן אצלכם במערכת טרם ההתקנה. תוכלו להריץ את הפקודה הבאה לשם כך בשורת הפקודה או ב-terminal:
 
@@ -49,10 +57,14 @@ npm install
 npm run dev
 ```
 
-## תצוגה מקדימה
+## תצוגה מקדימה 🚀
 
 אתם יכולים לצפות בתצוגה מקדימה של הפרויקט כאן:
 
 https://yeda.talisrae.li/
 
 זכרו שאתם יכולים לשנות את הצבעים ואת התוכן בקלות להעדפות האישיות שלכם.
+
+## רישיון 📝
+
+שוחרר תחת רישיון MIT
