@@ -5,39 +5,49 @@ import ITerm from '~/models/ITerm';
  */
 export const termsData: ITerm[] = [
   {
-    urlPath: 'getStarted',
+    urlPath: 'צעדים-ראשונים',
     displayName: 'צעדים ראשונים',
-    description: 'התחל להשתמש ב״ידע״',
-    customMarkdownPath: 'getStarted',
+    description: ` התחל להשתמש בתבנית ״ידע״. 
+    למדו על הפרויקט ועל הטכנולוגיות והדרישות המקדימות שלו
+    `,
+    customMarkdownPath: 'צעדים-ראשונים',
+    keywords: []
   },
   {
-    urlPath: 'projectStructure',
+    urlPath: 'מבנה-הפרויקט',
     displayName: 'מבנה הפרויקט ',
-    description: 'הכר את מבנה הפרויקט',
-    customMarkdownPath: 'projectStructure',
+    description: `למד את מבנה הפרויקט - תיקיות וקבצים חשובים שאותם נשנה לצורך התאמה אישית 
+    של התבנית.
+    `,
+    customMarkdownPath: 'מבנה-הפרויקט',
+    keywords: []
   },
   {
-    urlPath: 'addTerms',
+    urlPath: 'הוסף-מונחים',
     displayName: 'הוסף מונחים',
-    description: 'הוסף מונחים',
-    customMarkdownPath: 'addTerms',
+    description: `תוכלו להוסיף מונחים חדשים לתפריט אתר בקלות רבה, באמצעות יצירה של דפים בפורמט markdown.`,
+    customMarkdownPath: 'הוסף-מונחים',
+    keywords: []
   },
   {
-    urlPath: 'customDesign',
+    urlPath: 'עיצוב-אישי',
     displayName: 'עיצוב האתר',
-    description: 'עיצוב האתר',
-    customMarkdownPath: 'customDesign',
+    description: `התאמה אישית של עיצוב האתר באמצעות תכונות גלובליות תוך שימוש בפורמט sass.`,
+    customMarkdownPath: 'עיצוב-אישי',
+    keywords: []
   },
   {
-    urlPath: 'uiSystem',
+    urlPath: 'רכיבים-ויזואלים',
     displayName: 'רכיבים ויזואלים',
-    description: 'רכיבים ויזואלים',
-    customMarkdownPath: 'uiSystem',
+    description: `רכיבים ויזואלים משמעותיים שמופיעים בתבנית. למשל, תפריט צדדי, כפתורים ועוד.`,
+    customMarkdownPath: 'רכיבים-ויזואלים',
+    keywords: []
   },
   {
-    urlPath: 'contribute',
+    urlPath: 'תרמו-קוד',
     displayName: 'תרמו קוד לפרויקט',
-    description: 'תרמו קוד לפרויקט',
-    customMarkdownPath: 'contribute',
+    description: `מצאתם בעיה שאתם רוצים לתקן? יש לכם רעיון איך לשפר את הפרויקט או לתקן בעיות קיימות? אתם מומלצים להיכנס לעמוד הגיטהאב הרשמי שלנו ולתרום קוד!`,
+    customMarkdownPath: 'תרמו-קוד',
+    keywords: []
   },
 ];

@@ -12,7 +12,6 @@ interface ButtonProps extends JSX.HTMLAttributes<HTMLButtonElement> {
 /**
  * Button components for the UI
  */
-
 export function PrimaryButton(props: ButtonProps) {
   if (!props.icon) {
     return <button className={styles.primaryButton}>{props.children}</button>;

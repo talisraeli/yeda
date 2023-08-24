@@ -1,19 +1,15 @@
 // preact imports
-import { useEffect, useState } from 'preact/hooks';
+import { useEffect, useState, useMemo } from 'preact/hooks';
 import { route } from 'preact-router';
 import Markdown from 'preact-markdown';
-
 // yeda imports
 import { termsData } from './termsData';
 import ITerm from '~/models/ITerm';
 import useChangeDescription from '../../hooks/useChangeDescription';
 import useChangeTitle from '../../hooks/useChangeTitle';
-import { PrimaryButton } from '~components/UI/Buttons/Buttons';
 import styles from './Term.module.sass';
 
-// svgs
-import backArrow from './icons/backArrow.svg';
-import nextArrow from './icons/nextArrow.svg';
+import NextBackButtons from './nextBackButtons/nextBackButtons';
 
 type TermProps = {
   name?: string;
@@ -32,7 +28,7 @@ export default function Term(props: TermProps) {
   useChangeTitle(term?.displayName);
   useChangeDescription(term?.description);
 
-  const [markdown, setMarkdown] = useState<string>();
+  const [markdown, setMarkdown] = useState<string | null>(null);
 
   useEffect(() => {
     if (props.name === undefined) {
@@ -53,28 +49,19 @@ export default function Term(props: TermProps) {
       .then(text => setMarkdown(text))
       // eslint-disable-next-line no-console
       .catch(error => console.error(error));
-  const markdownContent = useCallback(() => {
-    markdown ? Markdown(markdown) : null;
+  });
+  const markdownContent = useMemo(() => {
+    return markdown ? Markdown(markdown) : null;
   }, [markdown]);
-  
 
-  const markdownContent = markdown ? Markdown(markdown) : null;
   return (
     <>
       {markdownContent}
       <div class={styles.afterMarkdown}>
-        <div class={styles.buttonList}>
-          <PrimaryButton
-            onClick={visitPreviousItem}
-            icon={backArrow}
-            isReversed={true}
-          >
-            למושג הקודם
-          </PrimaryButton>
-          <PrimaryButton onClick={visitNextItem} icon={nextArrow}>
-            למושג הבא
-          </PrimaryButton>
-        </div>
+        <NextBackButtons
+          visitNextItem={visitNextItem}
+          visitPreviousItem={visitPreviousItem}
+        />
       </div>
     </>
   );
