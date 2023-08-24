@@ -11,7 +11,14 @@ export const termsData: ITerm[] = [
     למדו על הפרויקט ועל הטכנולוגיות והדרישות המקדימות שלו
     `,
     customMarkdownPath: 'צעדים-ראשונים',
-    keywords: []
+    keywords: [],
+  },
+  {
+    urlPath: 'התקנה',
+    displayName: 'התקנה',
+    description: 'התקן את הפרויקט לסביבה הלוקאלית שלך.',
+    customMarkdownPath: 'התקנה',
+    keywords: [],
   },
   {
     urlPath: 'מבנה-הפרויקט',
@@ -20,34 +27,34 @@ export const termsData: ITerm[] = [
     של התבנית.
     `,
     customMarkdownPath: 'מבנה-הפרויקט',
-    keywords: []
+    keywords: [],
   },
   {
     urlPath: 'הוסף-מונחים',
     displayName: 'הוסף מונחים',
     description: `תוכלו להוסיף מונחים חדשים לתפריט אתר בקלות רבה, באמצעות יצירה של דפים בפורמט markdown.`,
     customMarkdownPath: 'הוסף-מונחים',
-    keywords: []
+    keywords: [],
   },
   {
     urlPath: 'עיצוב-אישי',
     displayName: 'עיצוב האתר',
     description: `התאמה אישית של עיצוב האתר באמצעות תכונות גלובליות תוך שימוש בפורמט sass.`,
     customMarkdownPath: 'עיצוב-אישי',
-    keywords: []
+    keywords: [],
   },
   {
     urlPath: 'רכיבים-ויזואלים',
     displayName: 'רכיבים ויזואלים',
     description: `רכיבים ויזואלים משמעותיים שמופיעים בתבנית. למשל, תפריט צדדי, כפתורים ועוד.`,
     customMarkdownPath: 'רכיבים-ויזואלים',
-    keywords: []
+    keywords: [],
   },
   {
     urlPath: 'תרמו-קוד',
     displayName: 'תרמו קוד לפרויקט',
     description: `מצאתם בעיה שאתם רוצים לתקן? יש לכם רעיון איך לשפר את הפרויקט או לתקן בעיות קיימות? אתם מומלצים להיכנס לעמוד הגיטהאב הרשמי שלנו ולתרום קוד!`,
     customMarkdownPath: 'תרמו-קוד',
-    keywords: []
+    keywords: [],
   },
 ];
