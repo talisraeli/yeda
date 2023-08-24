@@ -1,31 +1,16 @@
-import styles from './nextBackButtons.module.sass';
-import { PrimaryButton } from '~components/UI/Buttons/Buttons';
+import { NextButton, BackButton } from '~components/UI/Buttons/Buttons';
+import styles from "./nextBackButtons.module.sass";
 
-// icons
-import backArrow from  '../icons/backArrow.svg';
-import nextArrow from '../icons/nextArrow.svg';
-
-interface nextBackButtonsProps {
+interface NextBackButtonsProps {
   visitNextItem: () => void;
   visitPreviousItem: () => void;
 }
 
-/**
- * Buttons for moving to the next and previous terms in the side navigation
- */
-export default function NextBackButtons(props: nextBackButtonsProps) {
+export default function NextBackButtons(props: NextBackButtonsProps) {
   return (
     <div class={styles.buttonGroup}>
-      <PrimaryButton
-        onClick={props.visitPreviousItem}
-        icon={backArrow}
-        isReversed={true}
-      >
-        למושג הקודם
-      </PrimaryButton>
-      <PrimaryButton onClick={props.visitNextItem} icon={nextArrow}>
-        למושג הבא
-      </PrimaryButton>
+      <BackButton onClick={props.visitPreviousItem}>למושג הקודם</BackButton>
+      <NextButton onClick={props.visitNextItem}>למושג הבא</NextButton>
     </div>
   );
 }
