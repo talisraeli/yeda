@@ -1,6 +1,5 @@
 // preact imports
 import { useEffect, useState } from 'preact/hooks';
-import { Fragment } from 'preact/jsx-runtime';
 import { route } from 'preact-router';
 import Markdown from 'preact-markdown';
 
@@ -13,8 +12,8 @@ import { PrimaryButton } from '~components/UI/Buttons/Buttons';
 import styles from './Term.module.sass';
 
 // svgs
-import backArrow from '../../../public/assets/backArrow.svg';
-import nextArrow from '../../../public/assets/nextArrow.svg';
+import backArrow from './icons/backArrow.svg';
+import nextArrow from './icons/nextArrow.svg';
 
 type TermProps = {
   name?: string;
@@ -58,7 +57,7 @@ export default function Term(props: TermProps) {
 
   const markdownContent = markdown ? Markdown(markdown) : null;
   return (
-    <Fragment>
+    <>
       {markdownContent}
       <div class={styles.afterMarkdown}>
         <div class={styles.buttonList}>
@@ -74,6 +73,6 @@ export default function Term(props: TermProps) {
           </PrimaryButton>
         </div>
       </div>
-    </Fragment>
+    </>
   );
 }
