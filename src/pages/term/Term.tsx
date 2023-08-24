@@ -53,7 +53,10 @@ export default function Term(props: TermProps) {
       .then(text => setMarkdown(text))
       // eslint-disable-next-line no-console
       .catch(error => console.error(error));
-  }, [props.name]);
+  const markdownContent = useCallback(() => {
+    markdown ? Markdown(markdown) : null;
+  }, [markdown]);
+  
 
   const markdownContent = markdown ? Markdown(markdown) : null;
   return (
