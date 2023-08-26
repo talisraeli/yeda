@@ -20,7 +20,7 @@ export function Button(props: ButtonProps) {
  */
 export function PrimaryButton(props: ButtonProps) {
   return (
-    <Button className={styles.primaryButton} onClick={props.onClick}>
+    <Button className={styles.primaryButton} {...props}>
       {props.children}
     </Button>
   );
