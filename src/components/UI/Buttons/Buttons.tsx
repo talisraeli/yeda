@@ -18,7 +18,7 @@ export function Button(props: ButtonProps) {
  */
 export function PrimaryButton(props: ButtonProps) {
   return (
-    <Button className={styles.primaryButton} {...props}>
+    <Button className={styles.primaryButton} onClick={props.onClick}>
       {props.children}
     </Button>
   );
@@ -29,7 +29,7 @@ export function PrimaryButton(props: ButtonProps) {
  */
 export function SecondaryButton(props: ButtonProps) {
   return (
-    <Button className={styles.secondaryButton} {...props}>
+    <Button className={styles.secondaryButton} onClick={props.onClick}>
       {props.children}
     </Button>
   );
