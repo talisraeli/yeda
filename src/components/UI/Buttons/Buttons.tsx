@@ -4,8 +4,6 @@ import backIcon from './icons/backArrow.svg';
 import nextIcon from './icons/nextArrow.svg';
 
 interface ButtonProps extends JSX.HTMLAttributes<HTMLButtonElement> {
-  onClick: (() => void) | undefined;
-  children: JSX.Element | JSX.Element[] | string;
 }
 
 /**
