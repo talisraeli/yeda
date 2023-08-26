@@ -28,7 +28,7 @@ export default function Term(props: TermProps) {
   useChangeTitle(term?.displayName);
   useChangeDescription(term?.description);
 
-  const [markdown, setMarkdown] = useState<string | null>(null);
+  const [markdown, setMarkdown] = useState<string>();
 
   useEffect(() => {
     if (props.name === undefined) {
