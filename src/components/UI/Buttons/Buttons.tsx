@@ -3,14 +3,17 @@ import styles from './Buttons.module.sass';
 import backIcon from './icons/backArrow.svg';
 import nextIcon from './icons/nextArrow.svg';
 
-interface ButtonProps extends JSX.HTMLAttributes<HTMLButtonElement> {
-}
+interface ButtonProps extends JSX.HTMLAttributes<HTMLButtonElement> {}
 
 /**
  * Basic Button component
  */
 export function Button(props: ButtonProps) {
-  return <button className={styles.button} {...props}>{props.children}</button>;
+  return (
+    <button className={styles.button} {...props}>
+      {props.children}
+    </button>
+  );
 }
 
 /**

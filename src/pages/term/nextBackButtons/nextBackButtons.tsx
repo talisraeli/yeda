@@ -1,5 +1,5 @@
 import { NextButton, BackButton } from '~components/UI/Buttons/Buttons';
-import styles from "./nextBackButtons.module.sass";
+import styles from './nextBackButtons.module.sass';
 
 interface NextBackButtonsProps {
   onNextItemClick?: () => void;

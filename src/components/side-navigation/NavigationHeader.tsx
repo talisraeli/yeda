@@ -1,4 +1,4 @@
-import styles from "./SideNavigation.module.sass";
+import styles from './SideNavigation.module.sass';
 
 type NavigationHeaderProps = {
   name: string;
