@@ -9,7 +9,7 @@
         padding-block: 1rem
 
     .header-top
-        @include linear-gradient($color-primary, black)
+        background-color: $bg-header-top
 
         .logo
             padding: 0.5em
@@ -19,16 +19,16 @@
                 height: 3rem
 
     .header-bottom
-        @include linear-gradient($color-secondary, black)
+        background-color: $bg-header-bottom
 
         nav ul
-            list-style: none
-            display: flex
-            gap: 2rem
+        list-style: none
+        display: flex
+        gap: 2rem
 
-            li
-                img
-                    height: 1rem
+        li
+            img
+                height: 1rem
 
                 a
                     color: $text-color-header

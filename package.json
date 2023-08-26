@@ -9,15 +9,14 @@
     "preview": "vite preview",
     "lint": "eslint src/**/*.{js,jsx,ts,tsx}",
     "lint:fix": "eslint --fix src/**/*.{js,jsx,ts,tsx}",
-    "format": "prettier --write src/**/*.{js,jsx,ts,tsx,css,md,json,scss} --config ./.prettierrc",
+    "format": "prettier --write src/**/*.{js,jsx,ts,tsx,css,md,json,sass} --config ./.prettierrc",
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "prettier --write"
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
     ],
-    "*.{js,jsx,ts,tsx,css,md,json,scss}": [
+    "*.{js,jsx,ts,tsx,css,md,json,sass}": [
       "prettier --write --config ./.prettierrc"
     ]
   },

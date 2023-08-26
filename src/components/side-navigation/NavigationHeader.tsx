@@ -1,3 +1,5 @@
+import styles from './SideNavigation.module.sass';
+
 type NavigationHeaderProps = {
   name: string;
 };
@@ -8,7 +10,7 @@ type NavigationHeaderProps = {
  */
 export default function NavigationHeader(props: NavigationHeaderProps) {
   return (
-    <li class="wrapper">
+    <li class={`wrapper ${styles.navigationHeader}`}>
       <h2>{props.name}</h2>
     </li>
   );
