@@ -6,7 +6,7 @@ interface ITerm {
   displayName: string;
   description: string;
   customMarkdownPath?: string;
-  keywords?: string[]
+  keywords?: string[];
 }
 
 export default ITerm;
