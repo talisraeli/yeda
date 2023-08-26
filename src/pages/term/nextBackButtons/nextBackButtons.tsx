@@ -2,8 +2,8 @@ import { NextButton, BackButton } from '~components/UI/Buttons/Buttons';
 import styles from "./nextBackButtons.module.sass";
 
 interface NextBackButtonsProps {
-  visitNextItem: () => void;
-  visitPreviousItem: () => void;
+  onNextItemClick?: () => void;
+  onPreviousItemClick?: () => void;
 }
 
 export default function NextBackButtons(props: NextBackButtonsProps) {
