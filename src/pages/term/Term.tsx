@@ -43,8 +43,9 @@ export default function Term(props: TermProps) {
     }
 
     setTerm(term);
-
-    fetch(`/terms/${term.customMarkdownPath}.md`)
+    const markdownPath = term.customMarkdownPath ?? term.urlPath;
+    
+    fetch(`/terms/${markdownPath}.md`)
       .then(res => res.text())
       .then(text => setMarkdown(text))
       // eslint-disable-next-line no-console
@@ -59,8 +60,8 @@ export default function Term(props: TermProps) {
       {markdownContent}
       <div class={styles.afterMarkdown}>
         <NextBackButtons
-          visitNextItem={visitNextItem}
-          visitPreviousItem={visitPreviousItem}
+          onNextItemClick={visitNextItem}
+          onPreviousItemClick={visitPreviousItem}
         />
       </div>
     </>

@@ -4,15 +4,15 @@ import backIcon from './icons/backArrow.svg';
 import nextIcon from './icons/nextArrow.svg';
 
 interface ButtonProps extends JSX.HTMLAttributes<HTMLButtonElement> {
-  onClick: () => void;
-  children: JSX.Element | string;
+  onClick: (() => void) | undefined;
+  children: JSX.Element | JSX.Element[] | string;
 }
 
 /**
  * Basic Button component
  */
 export function Button(props: ButtonProps) {
-  return <button className={styles.button}>{props.children}</button>;
+  return <button className={styles.button} {...props}>{props.children}</button>;
 }
 
 /**
@@ -20,9 +20,9 @@ export function Button(props: ButtonProps) {
  */
 export function PrimaryButton(props: ButtonProps) {
   return (
-    <button className={styles.primaryButton} onClick={props.onClick}>
+    <Button className={styles.primaryButton} onClick={props.onClick}>
       {props.children}
-    </button>
+    </Button>
   );
 }
 
@@ -31,9 +31,9 @@ export function PrimaryButton(props: ButtonProps) {
  */
 export function SecondaryButton(props: ButtonProps) {
   return (
-    <button className={styles.SecondaryButton} onClick={props.onClick}>
+    <Button className={styles.secondaryButton} onClick={props.onClick}>
       {props.children}
-    </button>
+    </Button>
   );
 }
 
