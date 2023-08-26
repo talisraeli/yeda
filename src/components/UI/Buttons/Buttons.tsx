@@ -31,9 +31,9 @@ export function PrimaryButton(props: ButtonProps) {
  */
 export function SecondaryButton(props: ButtonProps) {
   return (
-    <button className={styles.SecondaryButton} onClick={props.onClick}>
+    <Button className={styles.secondaryButton} onClick={props.onClick}>
       {props.children}
-    </button>
+    </Button>
   );
 }
 
