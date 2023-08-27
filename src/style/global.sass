@@ -1,5 +1,8 @@
 body
     background: $bg-color-primary
+    //overflow-x:none
+    //!We should uncomment this when finishing to style, but leave it for now
+    //! for debugging purposes
 
 #app
     height: 100dvh
@@ -46,8 +49,9 @@ code
     display: block
     background: $bg-color-secondary
     border-radius: 1rem
+    overflow: scroll
 
 @media screen and (max-width: $medium-screen)
-    .wrapper 
+    .wrapper
         padding-inline-start: 2rem
         padding-inline-end: 1rem
