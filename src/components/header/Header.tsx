@@ -39,10 +39,10 @@ export default function Header(props: HeaderProps) {
               </button>
             </li>
             <li>
-              <a href="#">פופולרי</a>
+              <a href="/">פופולרי</a>
             </li>
             <li>
-              <a href="#">אודות האתר</a>
+              <a href="/אודות">אודות האתר</a>
             </li>
             <li>
               <button type="button">

@@ -4,6 +4,7 @@ import NavigationHeader from './NavigationHeader';
 import NavigationItem from './NavigationItem';
 import { SideNavigationContext } from '../../store/SideNavigationContext';
 import { termsData } from '~pages/term/termsData';
+import Overlay from '~components/UI/Buttons/overlay/Overlay';
 /**
  * The side navigation bar of the website.
  */
@@ -14,18 +15,20 @@ export default function SideNavigation() {
     return null;
   }
   return (
-    <aside class={style.sideNavigation}>
-      <nav>
-        <ul class={style.group}>
-          <NavigationHeader name="תפריט" />
-          {termsData.map(termData => (
-            <NavigationItem
-              name={termData.displayName}
-              path={`/${termData.urlPath}`}
-            />
-          ))}
-        </ul>
-      </nav>
-    </aside>
+    <Overlay display="full-width" onClick={() => {}}>
+      <aside class={style.sideNavigation}>
+        <nav>
+          <ul class={style.group}>
+            <NavigationHeader name="תפריט" />
+            {termsData.map(termData => (
+              <NavigationItem
+                name={termData.displayName}
+                path={`/${termData.urlPath}`}
+              />
+            ))}
+          </ul>
+        </nav>
+      </aside>
+    </Overlay>
   );
 }

@@ -16,6 +16,7 @@ import useTheme from '~hooks/useTheme';
 import Home from '~pages/home/Home';
 import NotFound from '~pages/NotFound/NotFound.tsx';
 import Term from '~pages/term/Term';
+import About from '~pages/about/About';
 
 export default function App() {
   const { isSideNavigationOpen, toggleSideNavigation } = useSideNavigation();
@@ -27,6 +28,7 @@ export default function App() {
       <Content>
         <Router>
           <Home path="/" />
+          <About path="/אודות" />
           <NotFound path="/404" />
           <Term path="/:name+" />
         </Router>
