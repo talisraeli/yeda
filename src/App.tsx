@@ -28,7 +28,7 @@ export default function App() {
       <Content>
         <Router>
           <Home path="/" />
-          <About path="/אודות" />
+          <About path="/%D7%90%D7%95%D7%93%D7%95%D7%AA" />
           <NotFound path="/404" />
           <Term path="/:name+" />
         </Router>
