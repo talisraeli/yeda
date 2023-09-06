@@ -11,11 +11,16 @@ import Overlay from '~components/UI/Buttons/overlay/Overlay';
 export default function SideNavigation() {
   const sideNavContext = useContext(SideNavigationContext);
   const isOpen = sideNavContext.isSideNavigationOpen;
+
+  const closeSideNavigation = () => {
+    sideNavContext.closeSideNavigation();
+  };
   if (!isOpen) {
     return null;
   }
   return (
-    <Overlay display="full-width" onClick={() => {}}>
+    <div className={style.sideNavigationContainer}>
+      <Overlay display="full-width" onClick={closeSideNavigation}></Overlay>
       <aside class={style.sideNavigation}>
         <nav>
           <ul class={style.group}>
@@ -29,6 +34,6 @@ export default function SideNavigation() {
           </ul>
         </nav>
       </aside>
-    </Overlay>
+    </div>
   );
 }

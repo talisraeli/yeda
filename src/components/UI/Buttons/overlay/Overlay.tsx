@@ -1,9 +1,8 @@
 import styles from './Overlay.module.sass';
 
 interface OverlayProps {
-  children: JSX.Element | JSX.Element[] | undefined;
   display: string | null;
-  onClick: () => void | null;
+  onClick?: (event?: MouseEvent) => void;
 }
 
 /**
@@ -15,8 +14,10 @@ export default function Overlay(props: OverlayProps) {
     displayMode = props.display;
   }
 
-  const onClickOverlayHandler = () => {
-    props?.onClick();
+  const onClickOverlayHandler = (event: MouseEvent) => {
+    if (props.onClick) {
+      props.onClick(event);
+    }
   };
 
   const displayClass = styles[`display-${displayMode}`];
@@ -24,8 +25,6 @@ export default function Overlay(props: OverlayProps) {
     <div
       class={`${styles.overlay} ${displayClass}`}
       onClick={onClickOverlayHandler}
-    >
-      {props.children}
-    </div>
+    ></div>
   );
 }
