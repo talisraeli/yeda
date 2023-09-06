@@ -19,11 +19,16 @@ import Term from '~pages/term/Term';
 import About from '~pages/about/About';
 
 export default function App() {
-  const { isSideNavigationOpen, toggleSideNavigation, closeSideNavigation } = useSideNavigation();
+  const { isSideNavigationOpen, toggleSideNavigation, closeSideNavigation } =
+    useSideNavigation();
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <Providers isSideNavigationOpen={isSideNavigationOpen} theme={theme} closeSideNavigation={closeSideNavigation}>
+    <Providers
+      isSideNavigationOpen={isSideNavigationOpen}
+      theme={theme}
+      closeSideNavigation={closeSideNavigation}
+    >
       <Header toggleSideNav={toggleSideNavigation} toggleTheme={toggleTheme} />
       <Content>
         <Router>
