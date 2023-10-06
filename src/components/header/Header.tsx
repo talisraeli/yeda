@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import menu from './menu.svg';
 import search from './search.svg';
 import theme from './theme.svg';
+import { useState } from 'preact/hooks';
+import { JSX } from 'preact';
 
 interface HeaderProps {
   toggleSideNav: () => void;
@@ -20,6 +22,8 @@ export default function Header(props: HeaderProps) {
   const handleOnThemeClick = () => {
     props.toggleTheme();
   };
+
+  const [searchTerm, setSearchTerm] = useState('');
 
   return (
     <header class={style.header}>
@@ -45,6 +49,16 @@ export default function Header(props: HeaderProps) {
               <a href="#">אודות האתר</a>
             </li>
             <li>
+              <input
+                type="text"
+                value={searchTerm}
+                onChange={(e: JSX.TargetedEvent<HTMLInputElement, Event>) => {
+                  const target = e.target as HTMLInputElement;
+                  setSearchTerm(target.value);
+                }}
+                placeholder="חיפוש..."
+              />
+
               <button type="button">
                 <img src={search} alt="סמל חיפוש" />
               </button>
