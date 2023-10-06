@@ -3,10 +3,16 @@ import logo from './logo.svg';
 import menu from './menu.svg';
 import search from './search.svg';
 import theme from './theme.svg';
-import { useState } from 'preact/hooks';
+import { useState, useEffect, useRef } from 'preact/hooks';
 import { JSX } from 'preact';
+import { termsData } from '~/pages/term/termsData';
+import ITerm from '~/models/ITerm';
+import { getCurrentUrl } from 'preact-router';
 
 interface HeaderProps {
+  searchTerm: string;
+  setFilteredTerms: (terms: ITerm[]) => void;
+  setSearchTerm: (term: string) => void;
   toggleSideNav: () => void;
   toggleTheme: () => void;
 }
@@ -23,7 +29,23 @@ export default function Header(props: HeaderProps) {
     props.toggleTheme();
   };
 
-  const [searchTerm, setSearchTerm] = useState('');
+  const [localSearchTerm, setLocalSearchTerm] = useState('');
+
+  const previousUrlRef = useRef<string | null>(null);
+
+  useEffect(() => {
+    const currentUrl = getCurrentUrl();
+    if (previousUrlRef.current !== currentUrl) {
+      console.log(
+        'Route has changed from:',
+        previousUrlRef.current,
+        'to:',
+        currentUrl
+      );
+      setLocalSearchTerm('');
+      previousUrlRef.current = currentUrl;
+    }
+  });
 
   return (
     <header class={style.header}>
@@ -51,10 +73,23 @@ export default function Header(props: HeaderProps) {
             <li>
               <input
                 type="text"
-                value={searchTerm}
-                onChange={(e: JSX.TargetedEvent<HTMLInputElement, Event>) => {
-                  const target = e.target as HTMLInputElement;
-                  setSearchTerm(target.value);
+                value={localSearchTerm}
+                onInput={(e: JSX.TargetedEvent<HTMLInputElement, Event>) => {
+                  const targetValue = (e.target as HTMLInputElement).value;
+                  setLocalSearchTerm(targetValue);
+
+                  if (targetValue.trim() === '') {
+                    props.setFilteredTerms([]);
+                    return;
+                  }
+
+                  props.setSearchTerm(targetValue);
+
+                  const results = termsData.filter(term =>
+                    term.displayName.includes(targetValue)
+                  );
+
+                  props.setFilteredTerms(results);
                 }}
                 placeholder="חיפוש..."
               />
